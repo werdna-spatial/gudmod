@@ -54,7 +54,9 @@ C  chlout :: computed acclimated chlorophyll if not dynamic
       _RL chlout(nPhoto)
       _RL diags(gud_nDiag)
 CEOP
-
+c === EAC
+      stop'EAC'
+c === EAC
 #ifdef ALLOW_GUD
 
 c !LOCAL VARIABLES: ====================================================
