@@ -104,6 +104,7 @@ C     & mon_write_mnc (since it is the only thread that uses those flags):
             CALL PRINT_MESSAGE(msgBuf, mon_ioUnit, SQUEEZE_RIGHT, 1)
 c ===EAC
 			WRITE(msgBuf,'(A)') '// EAC monitoring'
+			WRITE(*,*) '// EAC* monitoring'
             CALL PRINT_MESSAGE(msgBuf, mon_ioUnit, SQUEEZE_RIGHT, 1)
 c ===EAC 
 c            stop 'EAC - Monitoring'
