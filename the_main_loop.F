@@ -335,10 +335,7 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC 
-      WRITE(0,*) 'There as an error of kind EAC Main_loop'
-	  integer :: STATUS = 1
-      EXIT(STATUS)
-c         stop 'EAC'
+          stop 'EAC - main loop'
 c ===EAC    
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef ALLOW_OPENAD
