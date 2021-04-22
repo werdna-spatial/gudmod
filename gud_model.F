@@ -302,11 +302,9 @@ C==== make all bio fields non-negative and compute quotas ==============
       prodNO2 = 0.0
       prodNO3 = 0.0
 c ===EAC
-			WRITE(msgBuf,'(A)') '// EAC model'
-			WRITE(*,*) '// EAC* model'
-            
+			WRITE(*,*) '// EAC* model'  
 c ===EAC 
-            stop 'EAC - Mondel'
+            stop 'EAC - Model'
 c ===EAC  
       DO l=1,gud_nDiag
         diags(l) = 0.0
