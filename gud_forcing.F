@@ -102,7 +102,7 @@ C === dic ==============================================================
 C carbon air-sea interaction
       CALL TIMER_START('GUD_SURFFORCING [GUD_FORCING]',myThid)
 c ===EAC 
-			WRITE( *, * ) 'EACPRT - carbon' 
+			WRITE(msgBuf,'(2A)') 'EACPRT - carbon' 
 c          stop 'EAC - carbon'
 c ===EAC  
       CALL GUD_SURFFORCING(
@@ -233,7 +233,7 @@ c ===EAC
 c ==========
       CALL TIMER_START('GUD_GRAZING [GUD_FORCING]',myThid)
 c ===EAC 
-		WRITE( *, * ) 'EACPRT - Grazing'
+		WRITE(msgBuf,'(2A)') 'EACPRT - Grazing'
 c          stop 'EAC - Grazing'
 c ===EAC  
       do k=1,Nr
@@ -274,7 +274,7 @@ C === sinking ==========================================================
 C === apply tendencies to tracers ======================================
       CALL TIMER_START('GUD_STEP [GUD_FORCING]',myThid)
 c ===EAC 
-			WRITE( *, * ) 'EACPRT - tendencies'
+			WRITE(msgBuf,'(2A)') 'EACPRT - tendencies'
           stop 'EAC - tendencies'
 c ===EAC  
       DO iTr=1,nGud
@@ -285,7 +285,7 @@ c ===EAC
         pTracer(i,j,k,bi,bj,iTr)=pTracer(i,j,k,bi,bj,iTr)
 C ===EAC     &                      +dTsub(k)*gPtr(i,j,k,iTr)*maskInC(i,j,bi,bj)
 c ===EAC 
-WRITE( *, * ) 'EACPRT - ptracer'
+WRITE(msgBuf,'(2A)') 'EACPRT - ptracer'
           stop 'EAC - ptracer'
 c ===EAC  
       ENDDO

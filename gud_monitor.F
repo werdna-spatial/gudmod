@@ -103,10 +103,10 @@ C     & mon_write_mnc (since it is the only thread that uses those flags):
             WRITE(msgBuf,'(A)') '// Begin MONITOR GUD statistics'
             CALL PRINT_MESSAGE(msgBuf, mon_ioUnit, SQUEEZE_RIGHT, 1)
 c ===EAC
-			WRITE(msgBuf,'(A)') '// EAC'
+			WRITE(msgBuf,'(A)') '// EAC monitoring'
             CALL PRINT_MESSAGE(msgBuf, mon_ioUnit, SQUEEZE_RIGHT, 1)
 c ===EAC 
-            stop 'EAC - carbon'
+c            stop 'EAC - carbon'
 c ===EAC  
             WRITE(msgBuf,'(2A)') '// ===========================',
      &           '============================'
