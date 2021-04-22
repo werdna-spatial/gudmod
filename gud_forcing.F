@@ -271,7 +271,7 @@ C === apply tendencies to tracers ======================================
         pTracer(i,j,k,bi,bj,iTr)=pTracer(i,j,k,bi,bj,iTr)
 C ===EAC     &                      +dTsub(k)*gPtr(i,j,k,iTr)*maskInC(i,j,bi,bj)
 c ===EAC 
-c          stop 'EAC - ptracer'
+          stop 'EAC - ptracer'
 c ===EAC  
       ENDDO
       ENDDO
