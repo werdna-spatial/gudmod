@@ -106,7 +106,7 @@ c ===EAC
 			WRITE(msgBuf,'(A)') '// EAC monitoring'
             CALL PRINT_MESSAGE(msgBuf, mon_ioUnit, SQUEEZE_RIGHT, 1)
 c ===EAC 
-c            stop 'EAC - carbon'
+c            stop 'EAC - Monitoring'
 c ===EAC  
             WRITE(msgBuf,'(2A)') '// ===========================',
      &           '============================'
