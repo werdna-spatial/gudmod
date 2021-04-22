@@ -102,7 +102,7 @@ C === dic ==============================================================
 C carbon air-sea interaction
       CALL TIMER_START('GUD_SURFFORCING [GUD_FORCING]',myThid)
 c ===EAC 
-			WRITE( *, * ) 'EAC - carbon' 
+			WRITE( *, * ) 'EACPRT - carbon' 
 c          stop 'EAC - carbon'
 c ===EAC  
       CALL GUD_SURFFORCING(
@@ -186,7 +186,7 @@ C     iron sediment source (in bottom grid cell above kMaxFeSed)
 C === plankton =========================================================
       CALL TIMER_START('GUD_MODEL [GUD_FORCING]',myThid)
 c ===EAC 
-          WRITE( *, * ) 'EAC - plankton Forcing' 
+          WRITE( *, * ) 'EACPRT - plankton Forcing' 
 C          stop 'EAC - plankton Forcing'
 c ===EAC  
       do k=1,Nr
@@ -233,7 +233,7 @@ c ===EAC
 c ==========
       CALL TIMER_START('GUD_GRAZING [GUD_FORCING]',myThid)
 c ===EAC 
-		WRITE( *, * ) 'EAC - Grazing'
+		WRITE( *, * ) 'EACPRT - Grazing'
 c          stop 'EAC - Grazing'
 c ===EAC  
       do k=1,Nr
@@ -274,8 +274,8 @@ C === sinking ==========================================================
 C === apply tendencies to tracers ======================================
       CALL TIMER_START('GUD_STEP [GUD_FORCING]',myThid)
 c ===EAC 
-			WRITE( *, * ) 'EAC - tendicies'
-          stop 'EAC - tendecies'
+			WRITE( *, * ) 'EACPRT - tendencies'
+          stop 'EAC - tendencies'
 c ===EAC  
       DO iTr=1,nGud
       DO k=1,Nr
@@ -285,6 +285,7 @@ c ===EAC
         pTracer(i,j,k,bi,bj,iTr)=pTracer(i,j,k,bi,bj,iTr)
 C ===EAC     &                      +dTsub(k)*gPtr(i,j,k,iTr)*maskInC(i,j,bi,bj)
 c ===EAC 
+WRITE( *, * ) 'EACPRT - ptracer'
           stop 'EAC - ptracer'
 c ===EAC  
       ENDDO
