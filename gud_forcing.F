@@ -101,6 +101,9 @@ C === dic ==============================================================
 #ifdef GUD_ALLOW_CARBON
 C carbon air-sea interaction
       CALL TIMER_START('GUD_SURFFORCING [GUD_FORCING]',myThid)
+c ===EAC 
+          stop 'EAC - carbon'
+c ===EAC  
       CALL GUD_SURFFORCING(
      O                    gDIC, gALK, gO2,
      I                    bi,bj,imin,imax,jmin,jmax,
@@ -267,12 +270,9 @@ C === apply tendencies to tracers ======================================
       
         pTracer(i,j,k,bi,bj,iTr)=pTracer(i,j,k,bi,bj,iTr)
 C ===EAC     &                      +dTsub(k)*gPtr(i,j,k,iTr)*maskInC(i,j,bi,bj)
-c === EAC
-	  use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
-      WRITE(ERROR_UNIT,*) 'There as an error of kind EAC Tracer'
-      CALL EXIT(1)
-c      stop'EAC'
-c === EAC
+c ===EAC 
+c          stop 'EAC - ptracer'
+c ===EAC  
       ENDDO
       ENDDO
       ENDDO
