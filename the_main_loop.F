@@ -39,7 +39,7 @@ C $Name$
 #ifdef ALLOW_PROFILES
 # include "PROFILES_OPTIONS.h"
 #endif
-
+use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
 CBOP
 C     !ROUTINE: THE_MAIN_LOOP
 C     !INTERFACE:
@@ -336,7 +336,6 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC 
-      use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
       WRITE(ERROR_UNIT,*) 'There as an error of kind EAC Tracer'
       CALL EXIT(1)
 c        stop 'EAC'
