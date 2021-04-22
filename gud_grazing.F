@@ -119,7 +119,7 @@ C==== make all bio fields non-negative and compute quotas ==============
 c ===EAC 
 			WRITE(msgBuf,'(2A)') 'EACmsg - gud_grazing bio field'
 			WRITE(*,*) 'EAC* - gud_grazing bio field'
-c          stop 'EACstop - gud_grazing bio field'
+            stop 'EACstop - gud_grazing bio field'
 c ===EAC  
 C fixed carbon quota, for now 1.0 (may change later)
       Qc(:) = 1.0
