@@ -102,6 +102,7 @@ C === dic ==============================================================
 C carbon air-sea interaction
       CALL TIMER_START('GUD_SURFFORCING [GUD_FORCING]',myThid)
 c ===EAC 
+			WRITE( *, * ) 'EAC - carbon' 
 c          stop 'EAC - carbon'
 c ===EAC  
       CALL GUD_SURFFORCING(
@@ -185,7 +186,8 @@ C     iron sediment source (in bottom grid cell above kMaxFeSed)
 C === plankton =========================================================
       CALL TIMER_START('GUD_MODEL [GUD_FORCING]',myThid)
 c ===EAC 
-          stop 'EAC - plankton Forcing'
+          WRITE( *, * ) 'EAC - plankton Forcing' 
+C          stop 'EAC - plankton Forcing'
 c ===EAC  
       do k=1,Nr
       do j=1,sNy
@@ -231,7 +233,8 @@ c ===EAC
 c ==========
       CALL TIMER_START('GUD_GRAZING [GUD_FORCING]',myThid)
 c ===EAC 
-          stop 'EAC - Grazing'
+		WRITE( *, * ) 'EAC - Grazing'
+c          stop 'EAC - Grazing'
 c ===EAC  
       do k=1,Nr
       do j=1,sNy
@@ -271,7 +274,8 @@ C === sinking ==========================================================
 C === apply tendencies to tracers ======================================
       CALL TIMER_START('GUD_STEP [GUD_FORCING]',myThid)
 c ===EAC 
-          stop 'EAC - Step'
+			WRITE( *, * ) 'EAC - tendicies'
+          stop 'EAC - tendecies'
 c ===EAC  
       DO iTr=1,nGud
       DO k=1,Nr
