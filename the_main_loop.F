@@ -336,7 +336,7 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC 
-      WRITE(ERROR_UNIT,*) 'There as an error of kind EAC Tracer'
+      WRITE(0,*) 'There as an error of kind EAC Main_loop'
       CALL EXIT(1)
 c        stop 'EAC'
 c ===EAC    
