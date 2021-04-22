@@ -336,6 +336,9 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC 
+      use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
+      WRITE(ERROR_UNIT,*) 'There as an error of kind EAC Tracer'
+      CALL EXIT(1)
 c        stop 'EAC'
 c ===EAC    
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -267,9 +267,12 @@ C === apply tendencies to tracers ======================================
       
         pTracer(i,j,k,bi,bj,iTr)=pTracer(i,j,k,bi,bj,iTr)
 C ===EAC     &                      +dTsub(k)*gPtr(i,j,k,iTr)*maskInC(i,j,bi,bj)
-        integer :: STATUS = 9999
-        print *, 'pTracer exit.'
-        call EXIT(STATUS)
+c === EAC
+	  use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
+      WRITE(ERROR_UNIT,*) 'There as an error of kind EAC Tracer'
+      CALL EXIT(1)
+c      stop'EAC'
+c === EAC
       ENDDO
       ENDDO
       ENDDO
