@@ -336,9 +336,9 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC 
-      WRITE(0,*) 'There as an error of kind EAC Main_loop'
-      CALL EXIT(1)
-c        stop 'EAC'
+c      WRITE(0,*) 'There as an error of kind EAC Main_loop'
+c     CALL EXIT(1)
+        stop 'EAC'
 c ===EAC    
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef ALLOW_OPENAD
