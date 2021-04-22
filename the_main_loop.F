@@ -39,7 +39,6 @@ C $Name$
 #ifdef ALLOW_PROFILES
 # include "PROFILES_OPTIONS.h"
 #endif
-use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
 CBOP
 C     !ROUTINE: THE_MAIN_LOOP
 C     !INTERFACE:
@@ -336,9 +335,9 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC 
-c      WRITE(0,*) 'There as an error of kind EAC Main_loop'
-c     CALL EXIT(1)
-        stop 'EAC'
+      WRITE(0,*) 'There as an error of kind EAC Main_loop'
+     CALL EXIT(1)
+c         stop 'EAC'
 c ===EAC    
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef ALLOW_OPENAD
