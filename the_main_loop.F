@@ -64,7 +64,6 @@ C     *================================================================*
 C     \ev
 
 C     !USES:
-      use, intrinsic:: iso_fortran_env, only: stderr=>error_unit
       IMPLICIT NONE
 C     == Global variables ==
 #include "SIZE.h"
