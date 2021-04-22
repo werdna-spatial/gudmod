@@ -55,9 +55,9 @@ C  chlout :: computed acclimated chlorophyll if not dynamic
       _RL diags(gud_nDiag)
 CEOP
 c === EAC
-c      WRITE(ERROR_UNIT,*) 'There as an error of kind EAC'
+      WRITE(*,*) 'There as an error of kind EAC model'
 c      CALL EXIT(1)
-c      stop'EAC'
+      stop'EAC model'
 c === EAC
 #ifdef ALLOW_GUD
 
