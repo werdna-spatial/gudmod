@@ -54,11 +54,7 @@ C  chlout :: computed acclimated chlorophyll if not dynamic
       _RL chlout(nPhoto)
       _RL diags(gud_nDiag)
 CEOP
-c === EAC
-      WRITE(*,*) 'There as an error of kind EAC model'
-c      CALL EXIT(1)
-      stop'EAC model'
-c === EAC
+
 #ifdef ALLOW_GUD
 
 c !LOCAL VARIABLES: ====================================================
@@ -305,7 +301,13 @@ C==== make all bio fields non-negative and compute quotas ==============
       solubilPOFe  = 0.0
       prodNO2 = 0.0
       prodNO3 = 0.0
-
+c ===EAC
+			WRITE(msgBuf,'(A)') '// EAC model'
+			WRITE(*,*) '// EAC* model'
+            
+c ===EAC 
+            stop 'EAC - Mondel'
+c ===EAC  
       DO l=1,gud_nDiag
         diags(l) = 0.0
       ENDDO
