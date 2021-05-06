@@ -56,7 +56,11 @@ C  myThid               :: thread number
       _RL myTime
       INTEGER myIter, myThid
 CEOP
-
+c ===EAC
+			WRITE(msgBuf,'(2A)') 'EACmsg - GCHEM F'
+			WRITE(*,*) 'EAC* - GCHEM F'
+            #stop 'EACstop - Main Loop'
+c ===EAC
 #ifdef ALLOW_GCHEM
 #ifdef GCHEM_SEPARATE_FORCING
 
@@ -342,7 +346,7 @@ C          time at middle of sub-timestep
             subTime = subTime + deltaTclock/nsubtime
            ENDDO
            CALL TIMER_STOP ('GUD_FORCING [GCHEM_FORCING_SEP]',myThid)
-         
+
 C--   end bi,bj loops.
           ENDDO
          ENDDO
