@@ -337,7 +337,7 @@ c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC
 c			WRITE(msgBuf,'(2A)') 'EACmsg - Main Loop'
 c			WRITE(*,*) 'EAC* - Main Loop'
- c           #stop 'EACstop - Main Loop'
+c           #stop 'EACstop - Main Loop'
 c ===EAC
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef ALLOW_OPENAD
