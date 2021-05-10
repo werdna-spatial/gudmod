@@ -335,9 +335,9 @@ c--   Do the model integration.
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>   LOOP   <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c     >>>>>>>>>>>>>>>>>>>>>>>>>>>  STARTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 c ===EAC
-			WRITE(msgBuf,'(2A)') 'EACmsg - Main Loop'
-			WRITE(*,*) 'EAC* - Main Loop'
-            #stop 'EACstop - Main Loop'
+c			WRITE(msgBuf,'(2A)') 'EACmsg - Main Loop'
+c			WRITE(*,*) 'EAC* - Main Loop'
+ c           #stop 'EACstop - Main Loop'
 c ===EAC
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef ALLOW_OPENAD
